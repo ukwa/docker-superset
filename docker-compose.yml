@@ -1,0 +1,12 @@
+version: "3.2"
+
+services:
+
+  superset:
+    build:
+      context: .
+      args:
+        http_proxy: ${HTTP_PROXY}
+        https_proxy: ${HTTPS_PROXY}
+
+
