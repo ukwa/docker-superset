@@ -21,7 +21,7 @@ RUN useradd --user-group --no-create-home --no-log-init --shell /bin/bash supers
 ## Install
 RUN cd /app \
         && chown -R superset:superset * \
-        && pip install apache-superset Pillow
+        && pip install apache-superset Pillow redis
 
 RUN git clone https://github.com/aadel/sqlalchemy-solr && cd sqlalchemy-solr && python3 setup.py install 
 
