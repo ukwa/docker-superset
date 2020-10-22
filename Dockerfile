@@ -21,7 +21,7 @@ RUN useradd --user-group --no-create-home --no-log-init --shell /bin/bash supers
 ## Install
 RUN cd /app \
         && chown -R superset:superset * \
-        && pip install apache-superset Pillow redis psycopg2 pyhive pyldap pymssql elasticsearch-dbapi
+        && pip install apache-superset Pillow redis psycopg2 pyhive pymssql elasticsearch-dbapi
 
 RUN git clone https://github.com/aadel/sqlalchemy-solr && cd sqlalchemy-solr && python3 setup.py install 
 
